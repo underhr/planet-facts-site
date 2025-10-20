@@ -24,7 +24,7 @@ function Main({ current }) {
                     <p className="text-sm">{currentP.content}</p>
                     <span className="text-sm ">
                         Source: <a href={currentP.source} target="_blank" className='underline'>Wikipedia</a>
-                        <img src="src/assets/images/icon-source.svg" alt="Open Link" className='inline'></img>
+                        <img src="public/images/icon-source.svg" alt="Open Link" className='inline'></img>
                     </span>
                 </div>
 

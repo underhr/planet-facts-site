@@ -7,7 +7,7 @@ function Main({ current }) {
     const [active, setActive] = useState('overview')
 
     useEffect(() => {
-        setImage(current.images.planet);
+        setImage(`${import.meta.env.BASE_URL}images/${current.images.planet}`);
         setP(current.overview);
         setActive('overview');
     }, [current])

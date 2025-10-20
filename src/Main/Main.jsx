@@ -1,13 +1,14 @@
 import Button from './Button.jsx'
 import { useState, useEffect } from 'react';
+import { getImageUrl } from '../utils/getImageUrl.js';
 
 function Main({ current }) {
-    const [currentImage, setImage] = useState(`${import.meta.env.BASE_URL}${current.images.internal}`);
+    const [currentImage, setImage] = useState(getImageUrl(current.images.internal));
     const [currentP, setP] = useState(current.overview);
     const [active, setActive] = useState('overview')
 
     useEffect(() => {
-        setImage(`${import.meta.env.BASE_URL}images/${current.images.planet}`);
+        setImage(getImageUrl(current.images.planet));
         setP(current.overview);
         setActive('overview');
     }, [current])
@@ -24,28 +25,28 @@ function Main({ current }) {
                     <p className="text-sm">{currentP.content}</p>
                     <span className="text-sm ">
                         Source: <a href={currentP.source} target="_blank" className='underline'>Wikipedia</a>
-                        <img src={`${import.meta.env.BASE_URL}images/icon-source.svg`} alt="Open Link" className='inline'></img>
+                        <img src={getImageUrl('images/icon-source.svg')} alt="Open Link" className='inline'></img>
                     </span>
                 </div>
 
                 <div className='flex-col gap-2.5'>
                     <Button number="01" title="OVERVIEW" active={active === 'overview'} 
                         onClick={() => {
-                        setImage(`${import.meta.env.BASE_URL}${current.images.planet}`);
+                        setImage(getImageUrl(current.images.planet));
                         setP(current.overview);
                         setActive('overview');
                     }}/>
 
                     <Button number="02" title="INTERNAL STRUCTURE" active={active === 'structure'}
                         onClick={() => {
-                        setImage(`${import.meta.env.BASE_URL}${current.images.internal}`);
+                        setImage(getImageUrl(current.images.internal));
                         setP(current.structure);
                         setActive('structure');
                     }}/>
 
                     <Button number="03" title="SURFACE GEOLOGY" active={active === 'geology'}
                         onClick={() => {
-                        setImage(`${import.meta.env.BASE_URL}${current.images.planet}`);
+                        setImage(getImageUrl(current.images.planet));
                         setP(current.geology);
                         setActive('geology');
                     }}/>

@@ -14,7 +14,7 @@ function Main({ current }) {
     }, [current])
 
     return(
-        <section className='flex items-center justify-center'>
+        <section className='flex items-center justify-between w-5xl border'>
             <div>
                 <img src={currentImage} alt={current.name}></img>
             </div>
@@ -24,8 +24,10 @@ function Main({ current }) {
                     <h1 className="text-7xl uppercase">{current.name}</h1>
                     <p className="text-sm">{currentP.content}</p>
                     <span className="text-sm ">
-                        Source: <a href={currentP.source} target="_blank" className='underline'>Wikipedia</a>
-                        <img src={getImageUrl('icon-source.svg')} alt="Open Link" className='inline'></img>
+                        Source: 
+                        <a href={currentP.source} target="_blank" className='underline'>Wikipedia
+                            <img src={getImageUrl('icon-source.svg')} alt="Open Link" className='inline'></img>
+                        </a>
                     </span>
                 </div>
 

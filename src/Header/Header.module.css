@@ -1,13 +1,9 @@
-* {
-    font-family: spartan;
-}
 header {
     border-bottom: 1px solid rgba(151, 151, 151, 0.2);
 }
 
 h1 {
     font-family: antonio;
-    letter-spacing: -1.05px;
 }
 
 ul {

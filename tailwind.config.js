@@ -16,6 +16,10 @@ export default {
         uranus: "#1EC2A4",
         neptune: "#2D68F0",
       },
+      fontFamily: {
+        antonio: ['Antonio', 'sans-serif'],
+        spartan: ['Spartan', 'sans-serif'],
+      },
     },
   },
   plugins: [],

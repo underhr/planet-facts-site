@@ -1,6 +1,6 @@
 export default function Header({ data, setPlanet, planet }) {
     return(
-        <header className='flex items-center justify-between p-10'>
+        <header className='flex items-center justify-between p-10 border-b-neutral-700/20'>
             <h1 className=''>THE PLANETS</h1>
                 
             <ul className='flex gap-7 uppercase'>

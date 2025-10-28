@@ -31,12 +31,11 @@ function Main({ current }) {
             </div>
 
             <div className='max-w-xs flex flex-row lg:flex-col gap-5'>
-                <div className='flex flex-col gap-5'>
-                    <h1 className="text-7xl uppercase">{current.name}</h1>
+                <div className='flex flex-col gap-8'>
+                    <h1 className="text-7xl uppercase font-antonio">{current.name}</h1>
                     <p className="text-sm">{currentP.content}</p>
                     <span className="text-sm ">
-                        Source: 
-                        <a href={currentP.source} target="_blank" className='underline'>Wikipedia
+                        Source: <a href={currentP.source} target="_blank" className='underline'>Wikipedia
                             <img src={getImageUrl('icon-source.svg')} alt="Open Link" className='inline'></img>
                         </a>
                     </span>
@@ -49,10 +48,6 @@ function Main({ current }) {
                             setP(current.overview);
                             setActive('overview');
                         }}
-                        className={ `${
-                            active === 'overview'
-                            ? `${planetColors[current.name]}` 
-                            : 'bg-white/30'}`}
                     />
 
                     <Button number="02" title="INTERNAL STRUCTURE" active={active === 'structure'}

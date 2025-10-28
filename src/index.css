@@ -2,16 +2,42 @@
 
 @font-face {
   font-family: Antonio;
-  src: url('assets/fonts/Antonio/Antonio-VariableFont_wght.ttf');
+  src: url('./assets/fonts/Antonio/Antonio-VariableFont_wght.ttf');
 }
 
 @font-face {
   font-family: Spartan;
-  src: url('assets/fonts//League_Spartan/LeagueSpartan-VariableFont_wght.ttf');
+  src: url('./assets/fonts//League_Spartan/LeagueSpartan-VariableFont_wght.ttf');
 }
 
-:root {
-  font-family: Spartan;
+@theme {
+  --color-mercury: #419EBB;
+  --color-venus: #EDA249;
+  --color-earth: #6D2ED5;
+  --color-mars: #D14C32;
+  --color-jupiter: #D83A34;
+  --color-saturn: #CD5120;
+  --color-uranus: #1EC1A2;
+  --color-neptune: #2D68F0;
+  --color-darkBlue: #070724;
+  --color-lightGray: #838391;
+
+  --font-antonio: Antonio, sans-serif;
+  --font-spartan: Spartan, sans-serif;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-spartan);
   color: white;
   background-color: #070724;
+  background-image: url('./images/background-stars.svg');
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
 }
